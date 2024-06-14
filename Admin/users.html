@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Admin - Event Scheduler</title>
+		<link rel="icon" href="img/logo.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/bootstrap1.min.css" />
+
+		<link rel="stylesheet" href="vendors/themefy_icon/themify-icons.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/swiper_slider/css/swiper.min.css" />
+
+		<link rel="stylesheet" href="vendors/select2/css/select2.min.css" />
+
+		<link rel="stylesheet" href="vendors/niceselect/css/nice-select.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/owl_carousel/css/owl.carousel.css" />
+
+		<link rel="stylesheet" href="vendors/gijgo/gijgo.min.css" />
+
+		<link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
+		<link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/jquery.dataTables.min.css" />
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/responsive.dataTables.min.css" />
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/buttons.dataTables.min.css" />
+
+		<link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
+
+		<link rel="stylesheet" href="vendors/morris/morris.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/material_icon/material-icons.css" />
+
+		<link rel="stylesheet" href="css/metisMenu.css" />
+
+		<link rel="stylesheet" href="css/style1.css" />
+		<link
+			rel="stylesheet"
+			href="css/colors/default.css"
+			id="colorSkinCSS" />
+	</head>
+	<body class="crm_body_bg">
+		<!-- Side Bar Navigation Menu Start -->
+		<nav class="sidebar">
+			<!-- Admin Logo -->
+			<div class="logo d-flex justify-content-between">
+				<a href="index.html"><img src="img/logo.png" alt /></a>
+				<div class="sidebar_close_icon d-lg-none">
+					<i class="ti-close"></i>
+				</div>
+			</div>
+
+			<!-- Admin Sidebar Menu -->
+			<ul id="sidebar_menu">
+				<!-- Dashboard Menu -->
+				<li class="">
+					<a class="" href="index.html" aria-expanded="false">
+						<img src="img/menu-icon/1.svg" alt />
+						<span>Dashboard</span>
+					</a>
+				</li>
+
+				<!-- Manage Events -->
+				<li class="">
+					<a class="" href="events.html" aria-expanded="false">
+						<img src="img/menu-icon/3.svg" alt />
+						<span>Manage Events</span>
+					</a>
+				</li>
+
+				<!-- Manage Users -->
+				<li class="mm-active">
+					<a class="active" href="users.html" aria-expanded="false">
+						<img src="img/menu-icon/6.svg" alt />
+						<span>Manage Users</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Side Bar Navigation Menu Ends -->
+
+		<section class="main_content dashboard_part">
+			<!-- Main Container Header -->
+			<div class="container-fluid g-0">
+				<div class="row">
+					<div class="col-lg-12">
+						<div
+							class="header_iner d-flex justify-content-between align-items-center">
+							<div class="serach_field-area">
+								<div class="search_inner">
+									<p>Manage Users</p>
+								</div>
+							</div>
+							<div
+								class="header_right d-flex justify-content-between align-items-center">
+								<div class="profile_info">
+									<img
+										src="img/client_img.png"
+										alt="user image" />
+									<div class="profile_info_iner">
+										<p>Welcome Admin!</p>
+										<h5>Fortunatus Adegoke</h5>
+										<div class="profile_info_details">
+											<a href="user_profile.html"
+												>My Profile
+												<i class="ti-user"></i
+											></a>
+											<a href="#"
+												>Log Out
+												<i class="ti-shift-left"></i
+											></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Content Inner -->
+			<div class="main_content_iner">
+				<div class="container-fluid plr_30 body_white_bg pt_30">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<div class="QA_section">
+								<div class="white_box_tittle list_header">
+									<h4>Users</h4>
+									<div class="box_right d-flex lms_block">
+										<div class="serach_field_2">
+											<div class="search_inner">
+												<form action="#" method="get">
+													<div class="search_field">
+														<input
+															type="text"
+															name="q"
+															placeholder="Search content here..." />
+													</div>
+													<button type="submit">
+														<i
+															class="ti-search"></i>
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Data table -->
+								<div class="QA_table">
+									<table class="table lms_table_active">
+										<thead>
+											<tr>
+												<th scope="col">Username</th>
+												<th scope="col">First Name</th>
+												<th scope="col">Last Name</th>
+												<th scope="col">Email</th>
+												<th scope="col">User Type</th>
+												<th scope="col">Events</th>
+												<th scope="col">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<a
+														href="#"
+														class="question_content">
+														Fortunatus</a
+													>
+												</th>
+												<td>Fortunatus</td>
+												<td>Adegoke</td>
+												<td>fortunatus@event.com</td>
+												<td>Student</td>
+												<td>200</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-danger"
+														data-bs-toggle="modal"
+														data-bs-target="#deleteModal">
+														<i
+															class="fa fa-trash"></i>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<th scope="row">
+													<a
+														href="#"
+														class="question_content">
+														Jackson</a
+													>
+												</th>
+												<td>Samuel</td>
+												<td>Jackson</td>
+												<td>jackson@gmail.com</td>
+												<td>Lecturer</td>
+												<td>50</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-danger"
+														data-bs-toggle="modal"
+														data-bs-target="#deleteModal">
+														<i
+															class="fa fa-trash"></i>
+													</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Delete Modal -->
+								<div
+									class="modal fade"
+									id="deleteModal"
+									tabindex="-1"
+									aria-labelledby="exampleModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5
+													class="modal-title"
+													id="exampleModalLabel">
+													Delete User
+												</h5>
+												<button
+													type="button"
+													class="btn-close"
+													data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p>
+													Click confirm to delete USER
+												</p>
+											</div>
+											<div class="modal-footer">
+												<button
+													type="button"
+													class="btn btn-secondary"
+													data-bs-dismiss="modal">
+													Close
+												</button>
+												<form action="" method="post">
+													<button
+														type="submit"
+														class="btn btn-danger">
+														Confirm
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Starts -->
+			<div class="footer_part">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 col-sm-12">
+							<div class="footer_iner text-center">
+								<p>
+									2024 © Event Scheduler - Designed by<a
+										href="https://github.com/coding-fortunatus">
+										Fortunatus</a
+									>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Starts -->
+		</section>
+		<!-- JavaScript Library -->
+		<script src="js/jquery1-3.4.1.min.js"></script>
+		<script src="js/popper1.min.js"></script>
+		<script src="js/bootstrap1.min.js"></script>
+		<script src="js/metisMenu.js"></script>
+		<script src="vendors/count_up/jquery.waypoints.min.js"></script>
+		<script src="vendors/count_up/jquery.counterup.min.js"></script>
+		<script src="vendors/swiper_slider/js/swiper.min.js"></script>
+		<script src="vendors/niceselect/js/jquery.nice-select.min.js"></script>
+		<script src="vendors/gijgo/gijgo.min.js"></script>
+		<script src="vendors/datatable/js/jquery.dataTables.min.js"></script>
+		<script src="vendors/datatable/js/dataTables.responsive.min.js"></script>
+		<script src="vendors/datatable/js/dataTables.buttons.min.js"></script>
+		<script src="vendors/datatable/js/buttons.flash.min.js"></script>
+		<script src="vendors/datatable/js/jszip.min.js"></script>
+		<script src="vendors/datatable/js/pdfmake.min.js"></script>
+		<script src="vendors/datatable/js/vfs_fonts.js"></script>
+		<script src="vendors/datatable/js/buttons.html5.min.js"></script>
+		<script src="vendors/datatable/js/buttons.print.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Admin - Event Scheduler</title>
+		<link rel="icon" href="img/logo.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/bootstrap1.min.css" />
+
+		<link rel="stylesheet" href="vendors/themefy_icon/themify-icons.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/swiper_slider/css/swiper.min.css" />
+
+		<link rel="stylesheet" href="vendors/select2/css/select2.min.css" />
+
+		<link rel="stylesheet" href="vendors/niceselect/css/nice-select.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/owl_carousel/css/owl.carousel.css" />
+
+		<link rel="stylesheet" href="vendors/gijgo/gijgo.min.css" />
+
+		<link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
+		<link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/jquery.dataTables.min.css" />
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/responsive.dataTables.min.css" />
+		<link
+			rel="stylesheet"
+			href="vendors/datatable/css/buttons.dataTables.min.css" />
+
+		<link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
+
+		<link rel="stylesheet" href="vendors/morris/morris.css" />
+
+		<link
+			rel="stylesheet"
+			href="vendors/material_icon/material-icons.css" />
+
+		<link rel="stylesheet" href="css/metisMenu.css" />
+
+		<link rel="stylesheet" href="css/style1.css" />
+		<link
+			rel="stylesheet"
+			href="css/colors/default.css"
+			id="colorSkinCSS" />
+	</head>
+	<body class="crm_body_bg">
+		<!-- Side Bar Navigation Menu Start -->
+		<nav class="sidebar">
+			<!-- Admin Logo -->
+			<div class="logo d-flex justify-content-between">
+				<a href="index.html"><img src="img/logo.png" alt /></a>
+				<div class="sidebar_close_icon d-lg-none">
+					<i class="ti-close"></i>
+				</div>
+			</div>
+
+			<!-- Admin Sidebar Menu -->
+			<ul id="sidebar_menu">
+				<!-- Dashboard Menu -->
+				<li class="">
+					<a class="" href="index.html" aria-expanded="false">
+						<img src="img/menu-icon/1.svg" alt />
+						<span>Dashboard</span>
+					</a>
+				</li>
+
+				<!-- Manage Events -->
+				<li class="mm-active">
+					<a class="active" href="events.html" aria-expanded="false">
+						<img src="img/menu-icon/3.svg" alt />
+						<span>Manage Events</span>
+					</a>
+				</li>
+
+				<!-- Manage Users -->
+				<li class="">
+					<a class="" href="users.html" aria-expanded="false">
+						<img src="img/menu-icon/6.svg" alt />
+						<span>Manage Users</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Side Bar Navigation Menu Ends -->
+
+		<section class="main_content dashboard_part">
+			<!-- Main Container Header -->
+			<div class="container-fluid g-0">
+				<div class="row">
+					<div class="col-lg-12">
+						<div
+							class="header_iner d-flex justify-content-between align-items-center">
+							<div class="serach_field-area">
+								<div class="search_inner">
+									<p>Manage Events</p>
+								</div>
+							</div>
+							<div
+								class="header_right d-flex justify-content-between align-items-center">
+								<div class="profile_info">
+									<img
+										src="img/client_img.png"
+										alt="user image" />
+									<div class="profile_info_iner">
+										<p>Welcome Admin!</p>
+										<h5>Fortunatus Adegoke</h5>
+										<div class="profile_info_details">
+											<a href="user_profile.html"
+												>My Profile
+												<i class="ti-user"></i
+											></a>
+											<a href="#"
+												>Log Out
+												<i class="ti-shift-left"></i
+											></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Content Inner -->
+			<div class="main_content_iner">
+				<div class="container-fluid plr_30 body_white_bg pt_30">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<div class="QA_section">
+								<div class="white_box_tittle list_header">
+									<h4>Events</h4>
+									<div class="box_right d-flex lms_block">
+										<div class="serach_field_2">
+											<div class="search_inner">
+												<form Active="#" method="GET">
+													<div class="search_field">
+														<input
+															type="text"
+															name=""
+															placeholder="Search content here..." />
+													</div>
+													<button type="submit">
+														<i
+															class="ti-search"></i>
+													</button>
+												</form>
+											</div>
+										</div>
+
+										<!-- New Event Modal trigger -->
+										<div class="add_button ms-2">
+											<button
+												type="button"
+												class="btn btn-outline-primary"
+												data-bs-toggle="modal"
+												data-bs-target="#staticBackdrop">
+												Add New
+											</button>
+										</div>
+
+										<!-- Modal content -->
+										<div
+											class="modal fade"
+											id="staticBackdrop"
+											data-bs-backdrop="static"
+											data-bs-keyboard="false"
+											tabindex="-1"
+											aria-labelledby="staticBackdropLabel"
+											aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5
+															class="modal-title"
+															id="staticBackdropLabel">
+															Add New Event
+														</h5>
+														<button
+															type="button"
+															class="btn-close"
+															data-bs-dismiss="modal"
+															aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+														<form
+															action="#"
+															id="registration-form"
+															method="POST">
+															<div class="row">
+																<div
+																	class="form-group mb-3">
+																	<label
+																		class="form-label"
+																		for="title"
+																		>Title</label
+																	>
+																	<input
+																		type="text"
+																		class="form-control"
+																		placeholder="Event title"
+																		id="title"
+																		name="title"
+																		required />
+																</div>
+
+																<div
+																	class="form-group col-md-6 mb-3">
+																	<label
+																		class="form-label"
+																		for="eventcat"
+																		>Event
+																		Category</label
+																	>
+																	<select
+																		class="form-control"
+																		id="eventcat"
+																		name="eventcat"
+																		required>
+																		<option
+																			default>
+																			Choose
+																			Category
+																		</option>
+																		<option
+																			value="departmental">
+																			Departmental
+																		</option>
+																		<option
+																			value="faculty">
+																			Faculty
+																		</option>
+																		<option
+																			value="general">
+																			General
+																			Campus
+																		</option>
+																		<option
+																			value="others">
+																			Others
+																		</option>
+																	</select>
+																</div>
+
+																<div
+																	class="form-group col-md-6 mb-3">
+																	<label
+																		class="form-label"
+																		for="venue"
+																		>Event
+																		Venue</label
+																	>
+																	<select
+																		class="form-control"
+																		id="venue"
+																		name="venue"
+																		required>
+																		<option
+																			default>
+																			Choose
+																			Venue
+																		</option>
+																		<option
+																			value="250_seaters">
+																			250
+																			Seaters
+																		</option>
+																		<option
+																			value="500_seater">
+																			500
+																			Seater
+																		</option>
+																		<option
+																			value="750_seater">
+																			750
+																			Seater
+																		</option>
+																		<option
+																			value="1000_seater">
+																			1000
+																			Seater
+																		</option>
+																		<option
+																			value="1500_seater">
+																			1500
+																			Seater
+																		</option>
+																		<option
+																			value="2000_seater">
+																			2000
+																			Seater
+																		</option>
+																	</select>
+																</div>
+
+																<div
+																	class="form-group col-md-6 mb-3">
+																	<label
+																		class="form-label"
+																		for="date"
+																		>Event
+																		Date</label
+																	>
+																	<input
+																		type="date"
+																		class="form-control"
+																		placeholder="Event Date"
+																		id="date"
+																		name="date"
+																		required />
+																</div>
+
+																<div
+																	class="form-group col-md-6 mb-3">
+																	<label
+																		class="form-label"
+																		for="time"
+																		>Event
+																		Time</label
+																	>
+																	<input
+																		type="time"
+																		class="form-control"
+																		placeholder="Event Time"
+																		id="time"
+																		name="time"
+																		required />
+																</div>
+
+																<div
+																	class="form-group mb-3">
+																	<label
+																		class="form-label"
+																		for="organizer"
+																		>Event
+																		Organizer</label
+																	>
+																	<input
+																		type="text"
+																		class="form-control"
+																		placeholder="Organizer"
+																		id="organizer"
+																		name="organizer"
+																		required />
+																</div>
+
+																<div
+																	class="form-group mb-3">
+																	<label
+																		class="form-label"
+																		for="organizer"
+																		>Booking
+																		Account</label
+																	>
+																	<select
+																		class="form-control"
+																		id="venue"
+																		name="venue"
+																		required>
+																		<option
+																			default>
+																			Select
+																			. .
+																			.
+																		</option>
+																		<option
+																			value="fortunatus">
+																			Fortunatus
+																			Phillips
+																		</option>
+																		<option
+																			value="Jackson">
+																			Samuel
+																			Jackson
+																		</option>
+																	</select>
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="modal-footer">
+														<button
+															type="button"
+															class="btn btn-secondary"
+															data-bs-dismiss="modal">
+															Close
+														</button>
+
+														<form
+															action=""
+															method="post">
+															<button
+																type="submit"
+																class="btn btn-primary"
+																id="registration-submit-btn">
+																Book Session
+															</button>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="QA_table">
+									<table class="table lms_table_active">
+										<thead>
+											<tr>
+												<th scope="col">User ID</th>
+												<th scope="col">Title</th>
+												<th scope="col">Venue</th>
+												<th scope="col">Category</th>
+												<th scope="col">Organizer</th>
+												<th scope="col">Date & Time</th>
+												<th scope="col">Edit</th>
+												<th scope="col">Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													Annual General Meeting (AGM)
+												</td>
+												<td>1000 seater</td>
+												<td>Departmental</td>
+												<td>Samuel Jackson</td>
+												<td>09-12-2024, 10:00 AM</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-info text-white"
+														data-bs-toggle="modal"
+														data-bs-target="#editModal">
+														<i
+															class="fa fa-pen"></i>
+													</button>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-danger"
+														data-bs-toggle="modal"
+														data-bs-target="#deleteModal">
+														<i
+															class="fa fa-trash"></i>
+													</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td>2</td>
+												<td>Tech Summit</td>
+												<td>2000 seater</td>
+												<td>General Campus</td>
+												<td>Richard Warfer</td>
+												<td>08-10-2024, 10:00 AM</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-info text-white"
+														data-bs-toggle="modal"
+														data-bs-target="#editModal">
+														<i
+															class="fa fa-pen"></i>
+													</button>
+												</td>
+												<td>
+													<button
+														type="button"
+														class="btn btn-danger"
+														data-bs-toggle="modal"
+														data-bs-target="#deleteModal">
+														<i
+															class="fa fa-trash"></i>
+													</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Edit Modal -->
+								<div
+									class="modal fade"
+									id="editModal"
+									data-bs-backdrop="static"
+									data-bs-keyboard="false"
+									tabindex="-1"
+									aria-labelledby="staticBackdropLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5
+													class="modal-title"
+													id="staticBackdropLabel">
+													Edit event
+												</h5>
+												<button
+													type="button"
+													class="btn-close"
+													data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<form
+													action="#"
+													id="registration-form"
+													method="POST">
+													<div class="row">
+														<div
+															class="form-group mb-3">
+															<label
+																class="form-label"
+																for="title"
+																>Title</label
+															>
+															<input
+																type="text"
+																class="form-control"
+																placeholder="Event title"
+																id="title"
+																name="title"
+																value="Annual General Meeting"
+																required />
+														</div>
+
+														<div
+															class="form-group col-md-6 mb-3">
+															<label
+																class="form-label"
+																for="eventcat"
+																>Event
+																Category</label
+															>
+															<select
+																class="form-control"
+																id="eventcat"
+																name="eventcat"
+																required>
+																<option
+																	value="departmental"></option>
+																<option
+																	value="departmental">
+																	Departmental
+																</option>
+																<option
+																	value="faculty">
+																	Faculty
+																</option>
+																<option
+																	value="general">
+																	General
+																	Campus
+																</option>
+																<option
+																	value="others">
+																	Others
+																</option>
+															</select>
+														</div>
+
+														<div
+															class="form-group col-md-6 mb-3">
+															<label
+																class="form-label"
+																for="venue"
+																>Event
+																Venue</label
+															>
+															<select
+																class="form-control"
+																id="venue"
+																name="venue"
+																required>
+																<option
+																	value="1000_seater"></option>
+																<option
+																	value="250_seaters">
+																	250 Seaters
+																</option>
+																<option
+																	value="500_seater">
+																	500 Seater
+																</option>
+																<option
+																	value="750_seater">
+																	750 Seater
+																</option>
+																<option
+																	value="1000_seater">
+																	1000 Seater
+																</option>
+																<option
+																	value="1500_seater">
+																	1500 Seater
+																</option>
+																<option
+																	value="2000_seater">
+																	2000 Seater
+																</option>
+															</select>
+														</div>
+
+														<div
+															class="form-group col-md-6 mb-3">
+															<label
+																class="form-label"
+																for="date"
+																>Event
+																Date</label
+															>
+															<input
+																type="date"
+																class="form-control"
+																placeholder="Event Date"
+																id="date"
+																name="date"
+																required />
+														</div>
+
+														<div
+															class="form-group col-md-6 mb-3">
+															<label
+																class="form-label"
+																for="time"
+																>Event
+																Time</label
+															>
+															<input
+																type="time"
+																class="form-control"
+																placeholder="Event Time"
+																id="time"
+																name="time"
+																required />
+														</div>
+
+														<div
+															class="form-group mb-3">
+															<label
+																class="form-label"
+																for="organizer"
+																>Event
+																Organizer</label
+															>
+															<input
+																type="text"
+																class="form-control"
+																placeholder="Organizer"
+																id="organizer"
+																name="organizer"
+																value="Samuel Jackson"
+																required />
+														</div>
+
+														<div
+															class="form-group mb-3">
+															<label
+																class="form-label"
+																for="organizer"
+																>Booking
+																Account</label
+															>
+															<select
+																class="form-control"
+																id="venue"
+																name="venue"
+																required>
+																<option
+																	value="jackson"></option>
+																<option
+																	value="fortunatus">
+																	Fortunatus
+																	Phillips
+																</option>
+																<option
+																	value="jackson">
+																	Samuel
+																	Jackson
+																</option>
+															</select>
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="modal-footer">
+												<button
+													type="button"
+													class="btn btn-secondary"
+													data-bs-dismiss="modal">
+													Close
+												</button>
+
+												<form action="" method="post">
+													<div class="form-group">
+														<button
+															type="submit"
+															class="btn btn-primary"
+															id="registration-submit-btn">
+															Save Changes
+														</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Delete Modal -->
+								<div
+									class="modal fade"
+									id="deleteModal"
+									tabindex="-1"
+									aria-labelledby="exampleModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5
+													class="modal-title"
+													id="exampleModalLabel">
+													Delete Event
+												</h5>
+												<button
+													type="button"
+													class="btn-close"
+													data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p>
+													Click confirm to delete
+													Event
+												</p>
+											</div>
+											<div class="modal-footer">
+												<button
+													type="button"
+													class="btn btn-secondary"
+													data-bs-dismiss="modal">
+													Close
+												</button>
+												<form action="" method="post">
+													<button
+														type="submit"
+														class="btn btn-danger">
+														Confirm
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Starts -->
+			<div class="footer_part">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 col-sm-12">
+							<div class="footer_iner text-center">
+								<p>
+									2024 © Event Scheduler - Designed by<a
+										href="https://github.com/coding-fortunatus">
+										Fortunatus</a
+									>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Starts -->
+		</section>
+		<!-- JavaScript Library -->
+		<script src="js/jquery1-3.4.1.min.js"></script>
+		<script src="js/popper1.min.js"></script>
+		<script src="js/bootstrap1.min.js"></script>
+		<script src="js/metisMenu.js"></script>
+		<script src="vendors/count_up/jquery.waypoints.min.js"></script>
+		<script src="vendors/count_up/jquery.counterup.min.js"></script>
+		<script src="vendors/swiper_slider/js/swiper.min.js"></script>
+		<script src="vendors/niceselect/js/jquery.nice-select.min.js"></script>
+		<script src="vendors/gijgo/gijgo.min.js"></script>
+		<script src="vendors/datatable/js/jquery.dataTables.min.js"></script>
+		<script src="vendors/datatable/js/dataTables.responsive.min.js"></script>
+		<script src="vendors/datatable/js/dataTables.buttons.min.js"></script>
+		<script src="vendors/datatable/js/buttons.flash.min.js"></script>
+		<script src="vendors/datatable/js/jszip.min.js"></script>
+		<script src="vendors/datatable/js/pdfmake.min.js"></script>
+		<script src="vendors/datatable/js/vfs_fonts.js"></script>
+		<script src="vendors/datatable/js/buttons.html5.min.js"></script>
+		<script src="vendors/datatable/js/buttons.print.min.js"></script>
+	</body>
+</html>

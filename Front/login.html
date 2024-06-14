@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Login - Event Schedule</title>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="bower_components/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body data-spy="scroll" data-target="#site-nav">
+		<nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- logo -->
+					<div class="site-branding">
+						<a class="logo" href="index.html">
+							<!-- logo image  -->
+							<img src="assets/images/logo.png" alt="Logo" />
+
+							Event Scheduler
+						</a>
+					</div>
+
+					<button
+						type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#navbar-items"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- /.navbar-header -->
+
+				<div class="collapse navbar-collapse" id="navbar-items">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- navigation menu -->
+						<li class="">
+							<a data-scroll href="index.html">Home</a>
+						</li>
+						<li class="">
+							<a data-scroll href="events.html">Events</a>
+						</li>
+						<li class="active">
+							<a data-scroll href="login.html">Login</a>
+						</li>
+						<li><a data-scroll href="register.html">Sign-up</a></li>
+						<li>
+							<div
+								class="header_right d-flex justify-content-end align-items-center">
+								<div class="profile_info">
+									<img
+										src="assets/images/client_img.png"
+										alt="user image" />
+									<div class="profile_info_iner">
+										<h5>Fortunatus Adegoke</h5>
+										<div class="profile_info_details">
+											<a href="profile.html"
+												>My Profile
+												<i class="ti-user"></i
+											></a>
+											<a href="tickets.html"
+												>Tickets <i class="ti-user"></i
+											></a>
+											<a href="#"
+												>Log Out
+												<i class="ti-shift-left"></i
+											></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.container -->
+		</nav>
+
+		<section id="registration" class="section registration">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="section-title">Account Login</h3>
+						<p class="text-uppercase text-center">
+							Welcome to the event booking login page
+						</p>
+					</div>
+				</div>
+
+				<form action="#" id="registration-form" method="post">
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input
+									type="text"
+									class="form-control"
+									placeholder="E-mail"
+									id="email"
+									name="email"
+									required />
+							</div>
+
+							<div class="form-group">
+								<input
+									type="password"
+									class="form-control"
+									placeholder="Password"
+									id="password"
+									name="password"
+									required />
+							</div>
+
+							<div class="form-group">
+								<p>
+									Don't have an account?
+									<a
+										class="btn btn-warning"
+										href="register.html"
+										>Sign-up</a
+									>
+								</p>
+							</div>
+
+							<div class="form-group mt20">
+								<button
+									type="submit"
+									class="btn btn-primary"
+									id="registration-submit-btn">
+									Login
+								</button>
+							</div>
+						</div>
+						<div class="col-md-3"></div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="site-info">
+							Designed and <br />
+							Developed by
+							<a href="https://github.com/coding-fortunatus"
+								>Fortunatus</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- script -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

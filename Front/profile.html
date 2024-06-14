@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Profile - Event Schedule</title>
+
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="bower_components/ionicons/css/ionicons.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+			<div class="container">
+				<div class="navbar-header">
+					<div class="site-branding">
+						<a class="logo" href="index.html">
+							<img src="assets/images/logo.png" alt="Logo" />
+
+							Event Scheduler
+						</a>
+					</div>
+
+					<button
+						type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#navbar-items"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-items">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a data-scroll href="index.html">Home</a>
+						</li>
+						<li class="">
+							<a data-scroll href="events.html">Events</a>
+						</li>
+						<li class="">
+							<a data-scroll href="login.html">Login</a>
+						</li>
+						<li><a data-scroll href="register.html">Sign-up</a></li>
+						<li>
+							<div
+								class="header_right d-flex justify-content-end align-items-center">
+								<div class="profile_info">
+									<img
+										src="assets/images/client_img.png"
+										alt="user image" />
+									<div class="profile_info_iner">
+										<h5>Fortunatus Adegoke</h5>
+										<div class="profile_info_details">
+											<a href="profile.html"
+												>My Profile
+												<i class="ti-user"></i
+											></a>
+											<a href="tickets.html"
+												>Tickets <i class="ti-user"></i
+											></a>
+											<a href="#"
+												>Log Out
+												<i class="ti-shift-left"></i
+											></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section id="registration" class="section registration">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="section-title"></h3>
+					</div>
+				</div>
+
+				<!-- Alerts Helper -->
+				<div class="alert alert-success alert-dismissible" role="alert">
+					<button
+						type="button"
+						class="close"
+						data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong>Congratulations!</strong> You successfully update
+					your profile!
+				</div>
+
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<button
+						type="button"
+						class="close"
+						data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong>Oops!</strong> Something went wrong try again later!
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<h3 class="section-update">Profile Details</h3>
+						</div>
+						<div class="form-group">
+							<img
+								src="assets/images/client_img.png"
+								alt="user image" />
+						</div>
+
+						<!-- Modal Trigger Button -->
+						<button
+							type="button"
+							class="btn btn-primary mb10"
+							data-toggle="modal"
+							data-target="#flipFlop">
+							Update profile
+						</button>
+
+						<!-- Profile Details -->
+						<div class="form-group">
+							<p class="form-control mb10">
+								fortunatus@events.com
+							</p>
+							<p class="form-control mb10">Phillips</p>
+							<p class="form-control mb10">Fortunatus</p>
+							<p class="form-control mb10">Student</p>
+						</div>
+					</div>
+
+					<!-- The modal -->
+					<div
+						class="modal fade"
+						id="flipFlop"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="modalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button
+										type="button"
+										class="close"
+										data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4
+										class="modal-title text-uppercase"
+										id="modalLabel">
+										Profile update
+									</h4>
+								</div>
+								<!-- Modal Content Body -->
+								<div class="modal-body p5">
+									<form
+										action=""
+										method="POST"
+										enctype="multipart/form-data">
+										<div class="form-group">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="E-mail"
+												id="email"
+												name="email"
+												required />
+										</div>
+
+										<div class="form-group">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="First name"
+												id="fname"
+												name="firstname"
+												required />
+										</div>
+
+										<div class="form-group">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="Last name"
+												id="lname"
+												name="lastname"
+												required />
+										</div>
+
+										<div class="form-group">
+											<input
+												type="password"
+												class="form-control"
+												placeholder="Password"
+												id="password"
+												name="password"
+												required />
+										</div>
+
+										<div class="form-group">
+											<input
+												type="file"
+												class="form-control .form-control-file."
+												placeholder="Profile image"
+												id="image"
+												name="image"
+												accept=".jpg, .png, .jpeg"
+												required />
+										</div>
+
+										<div class="button-group">
+											<button
+												type="submit"
+												class="btn btn-primary">
+												Save Changes
+											</button>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-danger"
+										data-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="site-info">
+							Designed and <br />
+							Developed by
+							<a href="https://github.com/coding-fortunatus"
+								>Fortunatus</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- script -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
